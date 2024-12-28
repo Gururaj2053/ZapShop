@@ -13,7 +13,6 @@ const baseQuery = fetchBaseQuery({
 });
 
 async function baseQueryWithAuth(args, api, extra) {
-  console.log('Success is very near My Friend!!' + api + args + extra)
   const result = await baseQuery(args, api, extra);
   // Dispatch the logout action on 401.
   if (result.error && result.error.status === 401) {

@@ -5,7 +5,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import { useLogoutMutation } from '../slices/usersApiSlice';
 import { logout } from '../slices/authSlice';
 import SearchBox from './SearchBox';
-import logo from '../assets/logo.png';
+import Zap from '../assets/zap.png';
 import { resetCart } from '../slices/cartSlice';
 
 const Header = () => {
@@ -35,8 +35,8 @@ const Header = () => {
       <Navbar bg='primary' variant='dark' expand='lg' collapseOnSelect>
         <Container>
           <Navbar.Brand as={Link} to='/'>
-            <img src={logo} alt='ProShop' />
-            ProShop
+            <img src={Zap} alt='ZapShop' />
+            ZapShop
           </Navbar.Brand>
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='basic-navbar-nav'>
@@ -48,7 +48,7 @@ const Header = () => {
                   <Badge pill bg='success' style={{ marginLeft: '5px' }}>
                     {cartItems.reduce((a, c) => a + c.qty, 0)}
                   </Badge>
-                )}
+                ) }
               </Nav.Link>
               {userInfo ? (
                 <>

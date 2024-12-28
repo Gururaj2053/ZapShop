@@ -9,7 +9,7 @@ import {
   deleteUser,
   getUserById,
   updateUser,
-} from '../Controllers/userController.js';
+} from '../controllers/userController.js';
 import { protect, admin } from '../middleware/authMiddleware.js';
 
 const router = express.Router();
